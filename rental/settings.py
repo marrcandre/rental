@@ -115,4 +115,9 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication",
     ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    # Para testar:
+    # curl -X GET http://127.0.0.1:8000/api/v1/friends/
+    # curl -X GET http://127.0.0.1:8000/api/v1/friends/ \
+    # -H 'Authorization: Token 099ab7cfff7a388d052092a99fa39a692f8cc20e'
 }
