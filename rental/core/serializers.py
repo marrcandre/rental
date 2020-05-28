@@ -12,7 +12,7 @@ class FriendSerializer(serializers.ModelSerializer):
 class BelongingSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Belonging
-        fields = ("id", "name")
+        fields = ("id", "name", "owner")
 
 
 class BorrowedSerializer(serializers.ModelSerializer):
